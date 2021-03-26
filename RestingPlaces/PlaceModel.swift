@@ -30,7 +30,7 @@ struct Place {
         }
         
         return places
-        
+         
     }
     
 }
