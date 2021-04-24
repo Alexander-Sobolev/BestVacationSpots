@@ -68,6 +68,7 @@
                                     <outlet property="locationLabel" destination="TOA-Ec-M5m" id="Dwb-A7-ZcW"/>
                                     <outlet property="nameLabel" destination="uuW-F4-mM6" id="RCW-GG-sne"/>
                                     <outlet property="typeLabel" destination="zre-Vc-uTp" id="mB8-5R-Qgv"/>
+                                    <segue destination="wJw-oK-iBx" kind="show" identifier="showDetail" id="YrM-1I-wSZ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -76,7 +77,7 @@
                             <outlet property="delegate" destination="ln7-S2-2Yr" id="R4n-ad-B51"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Places" id="f8x-WK-2C5">
+                    <navigationItem key="navigationItem" title="Places" largeTitleDisplayMode="never" id="f8x-WK-2C5">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ce0-1T-zGa">
                             <connections>
                                 <segue destination="Sh3-Ah-gMs" kind="presentation" modalTransitionStyle="crossDissolve" id="MYN-E0-fyf"/>
@@ -93,7 +94,7 @@
             <objects>
                 <tableViewController id="wJw-oK-iBx" customClass="NewPlaceViewController" customModule="RestingPlaces" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="gKt-Ic-8f8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <inset key="separatorInset" minX="18" minY="0.0" maxX="18" maxY="0.0"/>
@@ -107,7 +108,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-ZZ-cFw">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Photo" translatesAutoresizingMaskIntoConstraints="NO" id="ewP-ZZ-cFw">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="250"/>
                                                     <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                 </imageView>
@@ -233,7 +234,7 @@
                             <outlet property="delegate" destination="wJw-oK-iBx" id="xAh-Uw-jta"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New Place" id="HuT-bw-vkS">
+                    <navigationItem key="navigationItem" title="New Place" largeTitleDisplayMode="always" id="HuT-bw-vkS">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ze7-DQ-vnf">
                             <connections>
                                 <action selector="canAction:" destination="wJw-oK-iBx" id="aZU-l1-wkk"/>
@@ -256,14 +257,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lzp-1M-TO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="XAY-KE-U1n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2275.36231884058" y="10.714285714285714"/>
+            <point key="canvasLocation" x="2278" y="11"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gq1-sg-KM6">
             <objects>
                 <navigationController id="xDD-f3-sKJ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZeN-uF-4nC">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZeN-uF-4nC">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="26"/>
@@ -296,9 +297,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vuo-af-Nru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1505.7971014492755" y="10.714285714285714"/>
+            <point key="canvasLocation" x="1500" y="-719"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="YrM-1I-wSZ"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Photo" width="195" height="196"/>
         <systemColor name="opaqueSeparatorColor">
